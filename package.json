@@ -6,7 +6,7 @@
         "name": "Kilama Elie",
         "url": "https://kilamaelie.com"
     },
-    "homepage": "https://github.com/elijahkilama/kilama.git",
+   
     "license": "MIT",
     "private": true,
     "dependencies": {

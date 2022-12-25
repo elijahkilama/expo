@@ -1,26 +1,22 @@
+/* eslint-disable react/no-array-index-key */
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable prettier/prettier */
 /* eslint-disable react/function-component-definition */
-import logo from './logo.svg';
-import './App.css';
+// import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import { Layout } from './common/components/layout';
+import { navLink } from './common/constant/navLinks';
 
 const App = () => {
     return (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    Edit <code>src/App.js</code> and save to reload.
-                </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </a>
-            </header>
+        <div>
+            <Layout>
+                <Routes>
+                    {navLink.map((item) => (
+                        <Route key={item.id} path={item.path} element={item.element} />
+                    ))}
+                </Routes>
+            </Layout>
         </div>
     );
 };
